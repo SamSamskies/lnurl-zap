@@ -1,0 +1,42 @@
+{
+  "name": "lnurl-zap",
+  "version": "0.0.0",
+  "description": "Generate LNURLs for Nostr events",
+  "main": "dist/lnurl-zap.umd.cjs",
+  "module": "dist/lnurl-zap.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && vite build",
+    "prepare": "npm run build",
+    "release": "npx np",
+    "test": "echo 'No tests to run'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git@github.com/SamSamskies/lnurl-zap.git"
+  },
+  "keywords": [
+    "nostr",
+    "lnurl",
+    "bitcoin",
+    "lightning"
+  ],
+  "author": "Sam Samskies",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SamSamskies/lnurl-zap/issues"
+  },
+  "homepage": "https://github.com/SamSamskies/lnurl-zap#readme",
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "vite": "^5.4.0",
+    "vite-plugin-dts": "^4.0.1"
+  },
+  "dependencies": {
+    "nostr-tools": "^2.7.1"
+  }
+}

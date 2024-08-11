@@ -29,17 +29,17 @@ const validateNostrId = (id: string) => {
 
 /**
  * @param id - Any Nostr ID e.g. note ID, npub, nevent, etc.
- * @param [lnurlZapServer='https://lnurlzap.vercel.app'] - LNURL server that broadcasts anonymous zaps when LNURLs are paid
+ * @param [lnurlZapServerBaseUrl='https://lnurlzap.vercel.app/api/zap'] - Base URL for LNURL server endpoint that broadcasts anonymous zaps when LNURLs are paid
  */
 export const encodeLnurl = (
   id: string,
-  lnurlZapServer = "https://lnurlzap.vercel.app",
+  lnurlZapServerBaseUrl = "https://lnurlzap.vercel.app/api/zap",
 ) => {
   if (!validateNostrId(id)) {
     throw new Error(`${id} is not a valid Nostr ID.`);
   }
 
-  const url = `${lnurlZapServer}/api/zap/${id}`;
+  const url = `${lnurlZapServerBaseUrl}/${id}`;
   const words = bech32.toWords(utf8ToBytes(url));
 
   return bech32.encode("lnurl", words, 1023).toUpperCase();

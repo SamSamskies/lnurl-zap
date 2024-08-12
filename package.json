@@ -1,6 +1,6 @@
 {
   "name": "lnurl-zap",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Generate LNURLs for Nostr events",
   "main": "dist/lnurl-zap.umd.cjs",
   "module": "dist/lnurl-zap.js",

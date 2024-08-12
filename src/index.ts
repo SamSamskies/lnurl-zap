@@ -29,11 +29,11 @@ const validateNostrId = (id: string) => {
 
 /**
  * @param id - Any Nostr ID e.g. note ID, npub, nevent, etc.
- * @param [lnurlZapServerBaseUrl='https://lnurlzap.vercel.app/api/zap'] - Base URL for LNURL server endpoint that broadcasts anonymous zaps when LNURLs are paid
+ * @param [lnurlZapServerBaseUrl='https://lnurlzap.com/api/zap'] - Base URL for LNURL server endpoint that broadcasts anonymous zaps when LNURLs are paid
  */
 export const encodeLnurl = (
   id: string,
-  lnurlZapServerBaseUrl = "https://lnurlzap.vercel.app/api/zap",
+  lnurlZapServerBaseUrl = "https://lnurlzap.com/api/zap",
 ) => {
   if (!validateNostrId(id)) {
     throw new Error(`${id} is not a valid Nostr ID.`);
